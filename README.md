@@ -33,5 +33,5 @@ On the administrator side, you can create new users, view all product details (i
 
 # 📸Screenshots
 
-![image-20231030110811347](.\image-20231030110811347.png)
+![image-20231030110811347](image-20231030110811347.png)
 
