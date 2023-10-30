@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 引入 Bootstrap 样式和脚本文件 -->
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+
+<!-- 添加一个按钮来触发模态框 -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    修改信息
+</button>
+
+<!-- 添加一个模态框来显示当前记录的信息和图片 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">修改信息</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 添加一个表单控件来允许用户上传新的图片 -->
+                <form enctype="multipart/form-data" id="form-upload">
+                    <div class="mb-3">
+                        <label for="input-file" class="form-label">上传图片</label>
+                        <input type="file" class="form-control" id="input-file" name="file" accept="image/*" data-max-size="5">
+                        <div id="error-msg"></div>
+                    </div>
+                </form>
+                <!-- 显示当前记录的信息和图片 -->
+                <div class="row">
+                    <div class="col-4">
+                        <img src="current-image.jpg" class="img-thumbnail">
+                        <input type="hidden" id="current-image" value="current-image.jpg">
+                        <button type="button" class="btn btn-secondary btn-delete" data-bs-toggle="tooltip" data-bs-placement="top" title="删除图片"><i class="bi bi-trash"></i></button>
+                    </div>
+                    <div class="col-8">
+                        <!-- 显示当前记录的其他信息 -->
+                        ...
+                    </div>
+                </div>
+            </div>
+			
+			
+			
+			
+			
+			
+			
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                <!-- 添加一个保存按钮来保存修改后的信息和图片 -->
+                <button type="button" class="btn btn-primary" id="btn-save">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 添加自定义的 CSS -->
+<style>
+    .img-thumbnail {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<!-- 添加自定义的 JavaScript -->
+<script>
+    // 获取必要的元素
+    var input_file = document.querySelector("#input-file");
+    var error_msg = document.querySelector("#error-msg");
+    var img = document.querySelector(".img-thumbnail");
+    var btn_delete = document.querySelector(".btn-delete");
+    var current_image = document.querySelector("#current-image");
+    var form_upload = document.querySelector("#form-upload");
+    var btn_save = document.querySelector("#btn-save");
+
+    // 显示当前图片和删除按钮
+    function showCurrentImage() {
+        if (current_image.value !== "") {
+            img.src = current_image.value;
+            btn_delete.style.display = "inline-block";
+        } else {
+            img.src = "";
+            btn_delete.style.display = "none";
+        }
+    }
+
+    // 删除当前图片
+    function deleteCurrentImage() {
+        current_image.value = "";
+        showCurrentImage();
+    }
+
+    // 上传新图片并显示
+    function uploadImage(file) {
+        if (file && file.size > input_file.dataset.maxSize * 1024 * 1024) {
+            error_msg.innerText = "图片大小不能超过 " + input_file.dataset.maxSize + " MB。";
+            input_file.value = "";
+        } else {
+            error_msg.innerText = "";
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                img.src = e.target.result;
+                current_image.value = "";
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    // 上传图片的 JavaScript 代码
+    input_file.addEventListener("change", function (e) {
+        uploadImage(e.target.files[0]);
+    });
+
+    // 删除图片的 JavaScript 代码
+    btn_delete
+</body>
+</html>

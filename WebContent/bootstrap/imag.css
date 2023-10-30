@@ -1,0 +1,8 @@
+@charset "UTF-8";
+.disabled .el-upload.el-upload--picture-card {
+    display: none !important;
+}
+
+.disabled .el-button--success.is-plain {
+    display: none !important;
+}
