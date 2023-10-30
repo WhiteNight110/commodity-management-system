@@ -9,8 +9,7 @@ This is my assignment for the web development course. Using JSP+Servlet to imple
 This is the administrator end of a product management system. In this project, the administrator can perform basic operations such as adding, deleting, modifying, and querying in the system.
 
 # 📝Table of Contents
-
-- [Commodity Management System](#commodity management system)
+- [Commodity Management System](#commodity-management-system)
 - [Description](#description)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
