@@ -1,6 +1,6 @@
 # Commodity Management System
 
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/navendu-pottekkat/awesome-readme?include_prereleases)![GitHub last commit](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)![GitHub issues](https://img.shields.io/github/issues-raw/navendu-pottekkat/awesome-readme)![GitHub pull requests](https://img.shields.io/github/issues-pr/navendu-pottekkat/awesome-readme)![GitHub](https://img.shields.io/github/license/navendu-pottekkat/awesome-readme)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/navendu-pottekkat/awesome-readme?include_prereleases)  ![GitHub last commit](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)  ![GitHub issues](https://img.shields.io/github/issues-raw/navendu-pottekkat/awesome-readme)  ![GitHub pull requests](https://img.shields.io/github/issues-pr/navendu-pottekkat/awesome-readme)  ![GitHub](https://img.shields.io/github/license/navendu-pottekkat/awesome-readme)
 
 This is my assignment for the web development course. Using JSP+Servlet to implement an administrator end of a Product Management System.
 
@@ -33,5 +33,5 @@ On the administrator side, you can create new users, view all product details (i
 
 # 📸Screenshots
 
-![image-20231030110811347](C:\Users\CRM\AppData\Roaming\Typora\typora-user-images\image-20231030110811347.png)
+![image-20231030110811347](.\image-20231030110811347.png)
 
